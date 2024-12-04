@@ -1,4 +1,6 @@
 #!/bin/bash
+sudo systemctl enable firewalld
+sudo systemctl start firewalld
 sudo firewall-cmd --set-default-zone=trusted
 sudo firewall-cmd --permanent --zone=trusted --add-interface=docker0
 sudo firewall-cmd --permanent --zone=trusted --add-service=cockpit
